@@ -23,18 +23,25 @@ produced. This allowed me to identify errors before moving onto the next stage.
 ### **Synthesis**
 After simulation I moved on to synthesis. Synthesis converts the Verilog code into a hardware representation that can be implemented on the FPGA. During the process Vivado checks the design and translates the Logic, including the background colours , the sun and the palm trees into resources that the Basys3 board can understand.
 ### **Demonstration**
-Perhaps add a picture of your demo. Guideline: 1/2 sentences.
 
+These are the hardware components and the logic gates that are being used to create the design.
 ## **My VGA Design Edit**
-Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
+For my design I had the idea of doing something I'm passionate about, video games, and what bigger game than GTA 6. I wanted to make something visually interesting that used different colours and simple shapes to 
+create a retro sunset screen.
+My design consists of three main features. Firstly I created a pink and orange colour gradient across the screen to represent the sky. I then added a yellowish / orange circle in the background to simulate the sun and lastly dotted about three blacked out silhouettes of palm trees to give that tropical climate vibe of Miami (the city the game was based on).
+In terms of complexity, I felt this was very achievable since I was using basic mathematic equations and pixel coordinates.
+I researched how VGA graphics can be generated using pixel coordinates and RGB colour values. This helped me understand how to create various shapes and colours.
 ### **Code Adaptation**
-Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
+I adapted the original code by removing the if and else that displayed the vertical stripes and changed it so that the RGB values are calculated using the pixels Rows and Column coordinates. I added the Purple-pink-orange gradient by changing the RGB values on the row position of each pixel.
+I then used  a simple mathematical equation to create a circle in the background which I'm using as the sun. For the Palm silhouettes I used conditional statements and different mathematical equations to control the position and shape of the trunk and leaves.
+I kept the original clock, reset  and RGB register sections from the template as they were still needed to display the image on the VGA monitor.
 ### **Simulation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
-### **Synthesis**
-Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
+### **Synthesis**  
+After Synthesising my adapted VGA design. it was successfully converted into hardware logic from the FPGA. The synthesis results showed that the design used additional logic gates compared to the original template because i
+introduced more calculations and conditional statements.
 ### **Demonstration**
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
+I successfully implemented my GTA 6 retro styled sunset on the Basys3 FPGA.
 
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
