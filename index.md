@@ -4,17 +4,17 @@ title: FPGA VGA Driver Project
 tags: fpga vga verilog
 categories: demo
 ---
-Add a short welcome message or introduction here. Aim to get the viewer interested in what follows! Guideline: 1 or 2 sentences. 
+Welcome to my FPGA VGA Project! In this project I designed a tropical GTA 6 inspired sunset , featuring a bright sun and palm trees, using Verilog and Vivado on a 640×480 VGA display.
 
-I am adding a test sentence here at 13:24 on 21/10/2026.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
+The project began with a template in Vivado that featured rainbow colour strips vertically across the screen. I used it as a starting point to develop my own design
 
 <img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSum.png">
 ### **Template Code**
-Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
+The original project template provided was called VGAColourStripes.v . This template generated eight colour strips across the VGA display. The code used row and col inputs to identify the position of each
+pixel on the screen and if and else statements checked the column position and assigned different RGB values to each stripe to give the varying colours. The VGA interface works by scanning each pixel left to right before moving on to the next column. The VGA driver provides coordinates to the graphics module to decide what each colour pixel will be. I adapted the original conditional statements to create my GTA inspired backdrop.
 ### **Simulation**
 Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
 ### **Synthesis**
